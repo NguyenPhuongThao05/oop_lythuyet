@@ -1,0 +1,41 @@
+public class Animal{
+  String name;
+  private boolean canSwim;
+  private boolean canWalk;
+
+  public Animal(String name,boolean canSwim, boolean canWalk) {
+    this.name = name;
+    this.canSwim = canSwim;
+    this.canWalk = canWalk;
+  }
+
+  public void printInfo(Animal[] ani) {
+    for(Animal a : ani){
+      if(a.canSwim == true) {
+        System.out.println(a.name + " can swim!");
+      }
+      if(a.canWalk == true) {
+        System.out.println(a.name + " can walk!");
+      }
+    }
+  }
+
+class Pig extends Animal {
+  Pig(String name) {
+    super(name, false, true);
+  }
+}
+
+class Duck extends Animal {
+  Duck(String name) {
+    super(name, true, true);
+  }
+}
+
+class Fish extends Animal {
+  Fish(String name) {
+    super(name, true, false);
+  }
+}
+
+
